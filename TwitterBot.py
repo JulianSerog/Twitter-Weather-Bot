@@ -35,8 +35,8 @@ for line in f:
 #create an infinite loop that updates the status to whatever the weather is currently
 while True:
 	#set a string here based on weather
-	print pywapi.get_location_ids("Athens")
-	weather_com_result = pywapi.get_weather_from_weather_com('USGA0027')
+	print pywapi.get_location_ids("Athens") #gets all location ID's for 'athens', prints to console, I used this to find the code for Athens, Georgia
+	weather_com_result = pywapi.get_weather_from_weather_com('USGA0027') #Athens Georgia code
 	message = "It is " + string.lower(weather_com_result['current_conditions']['text']) + " and " + weather_com_result['current_conditions']['temperature'] + "C now in Athens, Georgia.\n"
 	api.update_status(message)
 	time.sleep(3600) #sleep for 1 hour
