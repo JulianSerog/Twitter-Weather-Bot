@@ -215,8 +215,7 @@ def get_weather_from_weather_com(location_id, units = 'metric'):
                 tmp_forecast[time_of_day] = {}
                 for tag2 in ('icon', 't', 'bt', 'ppcp', 'hmid'):
                     key2 = key_map[tag2]
-                    tmp_forecast[time_of_day][
-                        key2] = part.getElementsByTagName(tag2)[0].firstChild.data
+                    tmp_forecast[time_of_day][key2] = part.getElementsByTagName(tag2)[0].firstChild.data
                 tmp_forecast[time_of_day]['wind'] = {}
                 for tag2 in ('s', 'gust', 'd', 't'):            
                     key2 = key_map[tag2]
