@@ -32,11 +32,12 @@ for line in f:
     time.sleep(15)#Tweet each line in file every 15 seconds
 """
 
+
 #create an infinite loop that updates the status to whatever the weather is currently
 while True:
 	#set a string here based on weather
 	print pywapi.get_location_ids("Athens") #gets all location ID's for 'athens', prints to console, I used this to find the code for Athens, Georgia
 	yahoo_result = pywapi.get_weather_from_yahoo('USGA0027') #Athens Georgia code
-	message = "It is " + str(yahoo_result['condition']['text']).lower() + " and " + str(yahoo_result['condition']['temp']) + "C now in Athens, Georgia.\n"
+	message = str(yahoo_result['condition']['text']).lower() + " and " + str(yahoo_result['condition']['temp']) + "C now in Athens, Georgia.\n"
 	api.update_status(message)
 	time.sleep(3600) #sleep for 1 hour
