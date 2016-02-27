@@ -34,7 +34,7 @@ while True:
 	#print pywapi.get_location_ids("Athens") #gets all location ID's for 'athens', prints to console, I used this to find the code for Athens, Georgia
 	yahoo_result = pywapi.get_weather_from_yahoo('USGA0027') #Athens Georgia code
 	#update new tweet text
-	message = str(yahoo_result['condition']['text']).lower() + " and " + str(yahoo_result['condition']['temp']) + "C now in Athens, Georgia.\n"
+	message = str(yahoo_result['condition']['text']).lower() + " and " + str(int(round(float(yahoo_result['condition']['temp']) * 1.8 + 32))) + "F now in Athens, Georgia.\n"
 	#to grab first status in tweepy.Cursor
 	counter = 0 
 	#find a more efficient way of doing this, tweepy documentation is tricky but this should solve the issue for now
