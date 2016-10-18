@@ -2,11 +2,15 @@
 
 #import frameworks
 import tweepy, time, sys, pywapi, string
+#new frameworks
+import pyowm
+from pprint import pprint
+import requests
 
-CONSUMER_KEY = 'zOqCHqDWjhcqnxl2DWd4QBtsX'
-CONSUMER_SECRET = 'hjXtgqS40u9paLEw99Wlp1PKrbOeGAF27KGQ4Yx2gEfg40Q4uk'
-ACCESS_KEY = '701621684198047744-xXwmYg4z55nsMImCmd6G1yao1YoaA59'
-ACCESS_SECRET = 'ILJpeb7VFnm98HBdZCHglysHkRvCW3bS2QL5MR3kX6iLs'
+CONSUMER_KEY = ''
+CONSUMER_SECRET = ''
+ACCESS_KEY = ''
+ACCESS_SECRET = ''
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
